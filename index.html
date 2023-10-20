@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <script src="./gallery.js" defer></script>
+    <link rel="stylesheet" href="./gallery.css">
+</head>
+<body>
+    <h1>My Gallery</h1>
+    <div id="container">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)"> 
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+        <img onclick="imgcontainer(this.src)">
+    </div>
+    <div id="bigImgContainer">
+        <span id="close" onclick="closecontainer()">X</span>
+        <div id="image">
+        </div>
+        <input type="button" value="Edit" id="edit" onclick="editWindowEnable()">
+    </div>
+
+    <div id="editContainer">
+        <span id="editclose" onclick="editWindowClose()">X</span>
+        <div id="editImage">
+              <div  id="imageTag"></div>
+        </div>
+    <div id="filters">
+        <h2 class="editHeading">Filter Adjustments</h2>
+    <h2>Blur</h2>
+    <input id="a" type="range" value="0" max="10" oninput="effects()">
+    <h2>Brightness</h2>
+    <input type="range" id="b" value="100" min="0" max="200" oninput="effects()">
+    <h2>Contrast</h2>
+    <input type="range" id="c" value="100" min="0" max="200"  oninput="effects()">
+    <h2>GrayScale</h2>
+    <input type="range" id="d" value="0" min="0" max="100" oninput="effects()">
+    <h2>Hue-rotation</h2>
+    <input type="range" id="e" min="0" max="360" value="0" oninput="effects()">
+    <h2>Invert</h2>
+    <input type="range" value="0" min="0" max="100" id="f" oninput="effects()">
+    <h2>opacity</h2>
+    <input type="range" value="100" id="g" oninput="effects()">
+    <h2>saturate</h2>
+    <input type="range" min="0" max="200" value="100" id="h" oninput="effects()">
+    <h2>sepia</h2>
+    <input type="range" min="0" max="100" value="0" id="i" oninput="effects()">
+    </div>
+    <div id="transform" oninput="effects()">
+        <h2 class="editHeading">Transform Adjustments</h2>
+        <h2>Rotate z</h2>
+        <input type="range"  id="j" min="0" max="360" value="0" oninput="effects()">
+        <h2>Rotate x</h2>
+        <input type="range" id="k" min="0" max="360" value="0" oninput="effects()">
+        <h2>Rotate y</h2>
+        <input type="range" id="l" min="0" max="360" value="0" oninput="effects()">
+        <h2>scale</h2>
+        <input type="range" id="m" min="0" max="2" value="0.5" oninput="effects()">
+        <h2>Scale X</h2>
+        <input type="range" id="n" min="0" max="2" value="0.5" oninput="effects()">
+        <h2>scale Y</h2>
+        <input type="range" id="o"  min="0" max="2" value="0.5" oninput="effects()">
+        <h2>skew</h2>
+       <input type="range" min="0" max="360" value="0"  id="p" oninput="effects()">
+       <h2>skew x</h2>
+       <input type="range" min="0" max="360" value="0"  id="q" oninput="effects()">
+       <h2>skew y</h2>
+       <input type="range" min="0" max="360" value="0"  id="r" oninput="effects()">
+    </div>
+</body>
+</html>
